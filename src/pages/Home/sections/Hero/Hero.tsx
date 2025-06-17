@@ -71,8 +71,8 @@ const Hero = () => {
               <Typography color="primary.contrastText" variant="h2" textAlign="center">
                 Juan Helpes
               </Typography>
-              <Typography color="primary.contrastText" variant="h3" textAlign="center" pb={2}>
-                I'm a Computer Engineer
+              <Typography color="primary.contrastText" variant="h4" textAlign="center" pb={2}>
+                Sou um Engenheiro de Computação
               </Typography>
               <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                 <Grid size={{ xs: 12, md: 4 }} display="flex" justifyContent="center">
@@ -87,7 +87,7 @@ const Hero = () => {
                   <StyledButton onClick={() => handleEmail()}>
                     <EmailIcon />
                     <Typography>
-                      Contact me
+                      Contate-me
                     </Typography>
                   </StyledButton>
                 </Grid>

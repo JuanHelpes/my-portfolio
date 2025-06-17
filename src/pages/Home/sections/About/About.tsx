@@ -15,14 +15,14 @@ const AboutSection: React.FC = () => {
     }));
 
     const skillsSet = [
-        "Javascript", "React", "Git", "HTML", "CSS", "Material UI", "Node.js", "Express", "MongoDB", "MySQL", "Python", "Java", "C++"
+        "Javascript", "React", "Git", "HTML", "CSS", "Material UI", "Node.js", "Express", "MongoDB", "MySQL", "Python", "Java", "C++", "Power Platform"
     ]
 
     return (
         <>
             <Container maxWidth="lg">
                 <Box id="about" pt={5} mb={3}>
-                    <Typography variant="h2" textAlign="center" >About me</Typography>
+                    <Typography variant="h2" textAlign="center" >Sobre</Typography>
                 </Box>
                 <Grid container  display="flex" justifyContent="center" >
                     {/* <Grid size= {{xs:9, md:2.5}}>
@@ -39,9 +39,9 @@ const AboutSection: React.FC = () => {
                         <AnimationComponent moveDirection="left">
                             <StyledCard variant="outlined">
                                 <SchoolIcon />
-                                <Typography textAlign="center" fontWeight={600}>Education</Typography>
-                                <Typography textAlign="center">Bachelors Degree</Typography>
-                                <Typography textAlign="center">Computer Engineer</Typography>
+                                <Typography textAlign="center" fontWeight={600}>Educação</Typography>
+                                <Typography textAlign="center">Bacharelado em</Typography>
+                                <Typography textAlign="center">Engenharia de Computação</Typography>
                             </StyledCard>
                         </AnimationComponent>
 
@@ -49,11 +49,11 @@ const AboutSection: React.FC = () => {
                 </Grid>
                 <Box pb={1}>
                     <Typography>
-                        Graduado em Engenharia de Computação pelo CEFET-MG com foco em desenvolvimento profissional e obtenção de 
-                        novos conhecimentos na área de desenvolvimento de software. Experiências acadêmicas como monitor em disciplina 
-                        da área de computação, desenvolvimento de sistemas web e mobile, participação em empresa incubada como 
-                        desenvolvedor e estágio na área de desenvolvimento de aplicativos em low-code e automações digitais de fluxos de 
-                        trabalho. 
+                        Graduado em Engenharia de Computação pelo CEFET-MG, com foco em desenvolvimento de software e constante busca por aprimoramento profissional. 
+                        Possuo experiências acadêmicas como monitor em disciplinas da área de computação, além de atuação em projetos de pesquisa, extensão e em empresa 
+                        incubada como desenvolvedor, onde atuei principalmente no backend utilizando Node.js e PHP. Também realizei estágio na área de 
+                        desenvolvimento de aplicações low-code e automações digitais de processos e fluxos de trabalho, ampliando minha visão sobre integração de 
+                        sistemas e otimização de processos.
                     </Typography>
                 </Box>
                 <hr />

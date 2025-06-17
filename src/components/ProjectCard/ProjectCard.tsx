@@ -1,18 +1,26 @@
 import { Box, Grid, Typography, styled } from "@mui/material";
 import StyledButton from "../StyledButton/StyledButton";
 import Slider from "react-slick";
-import eCommerceHome from "../../assets/images/eCommerceHome_1.png";
-import eCommerceCarrinho from "../../assets/images/carrinhoEcommerce.png";
-import eCommerceLogin from "../../assets/images/loginEcommerce.png";
-import eCommerceDados from "../../assets/images/meusDadosEcommerce.png";
+import eCommerceHome from "../../assets/images/eCommerce/eCommerceHome_1.png";
+import eCommerceCarrinho from "../../assets/images/eCommerce/carrinhoEcommerce.png";
+import eCommerceLogin from "../../assets/images/eCommerce/loginEcommerce.png";
+import eCommerceDados from "../../assets/images/eCommerce/meusDadosEcommerce.png";
 import SliderComp from "../Slider/Slider";
+
+import loginMobile from "../../assets/images/appMobile/login.png";
+import userMobile from "../../assets/images/appMobile/user.png";
+import eventoMobile from "../../assets/images/appMobile/eventos.png";
+import presencaMobile from "../../assets/images/appMobile/registrarPresenca.png";
+
+
+
 
 export interface ProjectCardProps {
     title: string;
     subtitle: string;
-    description: string
-    technologies: string
-    // websiteURL: string;
+    description: string;
+    technologies: string;
+    imgs: string[];
     codeURL: string;
 }
 
@@ -20,8 +28,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     title,
     subtitle,
     description,
+    imgs,
     technologies,
-    // websiteURL,
     codeURL
 }) => {
 
@@ -38,11 +46,21 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     }));
 
     const StyledCard = styled("div")(({ theme }) => ({
-        borderRadius: "3px",
-        border: `0.5px solid  ${theme.palette.primary.contrastText}`,
+    borderRadius: "3px",
+        border: `0.5px solid ${theme.palette.primary.contrastText}`,
         backgroundColor: "transparent",
         color: theme.palette.primary.contrastText,
         padding: "20px",
+        display: "flex",
+        flexDirection: "column",
+
+
+        
+        // 🔸 Altura fixa para telas grandes
+        [theme.breakpoints.up('md')]: {
+            height: "900px",
+        },
+
         '&:hover': {
             backgroundColor: theme.palette.primary.light
         }
@@ -69,17 +87,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
     return (
         <StyledCard>
-            <Typography variant="h5">
+            <Typography variant="h5" gutterBottom>
                 {title}
             </Typography>
-            <Typography >
+            <Typography gutterBottom>
                 {subtitle}
             </Typography>
-            <SliderComp images={[eCommerceHome, eCommerceLogin, eCommerceCarrinho, eCommerceDados]}/>
+            <SliderComp images={imgs || []}/>
              {/* <StyledImg src={eCommerceHome} /> */}
-            <Typography>
-                {description}
-            </Typography>
+             <Box flexGrow={1} minHeight={"100px"} mb={2}>
+                <Typography >
+                    {description}
+                </Typography>
+             </Box>
+            
             <Typography fontWeight={600} pt={2}>
                 {technologies}
             </Typography>

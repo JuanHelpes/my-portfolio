@@ -1,10 +1,14 @@
 import { styled } from "@mui/material";
 import Slider from "react-slick";
-import eCommerceHome from "../../assets/images/eCommerceHome_1.png";
-import eCommerceCarrinho from "../../assets/images/carrinhoEcommerce.png";
-import eCommerceLogin from "../../assets/images/loginEcommerce.png";
-import eCommerceDados from "../../assets/images/meusDadosEcommerce.png";
+import eCommerceHome from "../../assets/images/eCommerce/eCommerceHome_1.png";
+import eCommerceCarrinho from "../../assets/images/eCommerce/carrinhoEcommerce.png";
+import eCommerceLogin from "../../assets/images/eCommerce/loginEcommerce.png";
+import eCommerceDados from "../../assets/images/eCommerce/meusDadosEcommerce.png";
 
+import loginMobile from "../../assets/images/appMobile/login.png";
+import userMobile from "../../assets/images/appMobile/user.png";
+import eventoMobile from "../../assets/images/appMobile/eventos.png";
+import presencaMobile from "../../assets/images/appMobile/registrarPresenca.png";
 export interface SliderProps {
   images: string[];
 }
@@ -63,7 +67,7 @@ const SliderWrapper = styled("div")(({ theme }) => ({
 "& .slick-dots": {
 
     [theme.breakpoints.up("md")]: {
-    bottom: "5px", // distancia do fundo do slider (padrão costuma ser 20px)
+    bottom: "-3px", // distancia do fundo do slider (padrão costuma ser 20px)
   marginBottom: "0px", // evita espaço extra após o slider
   },
   
