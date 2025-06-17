@@ -1,5 +1,4 @@
 import Footer from "../../components/Footer/Footer"
-import SliderComp from "../../components/Slider/Slider"
 // import NavBar from "../../components/NavBar/Na´vBar"
 import AboutSection from "./sections/About/About"
 import Hero from "./sections/Hero/Hero"
