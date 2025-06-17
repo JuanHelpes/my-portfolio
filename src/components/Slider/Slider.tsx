@@ -1,14 +1,5 @@
 import { styled } from "@mui/material";
 import Slider from "react-slick";
-import eCommerceHome from "../../assets/images/eCommerce/eCommerceHome_1.png";
-import eCommerceCarrinho from "../../assets/images/eCommerce/carrinhoEcommerce.png";
-import eCommerceLogin from "../../assets/images/eCommerce/loginEcommerce.png";
-import eCommerceDados from "../../assets/images/eCommerce/meusDadosEcommerce.png";
-
-import loginMobile from "../../assets/images/appMobile/login.png";
-import userMobile from "../../assets/images/appMobile/user.png";
-import eventoMobile from "../../assets/images/appMobile/eventos.png";
-import presencaMobile from "../../assets/images/appMobile/registrarPresenca.png";
 export interface SliderProps {
   images: string[];
 }
