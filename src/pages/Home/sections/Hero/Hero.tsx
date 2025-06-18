@@ -1,7 +1,8 @@
 import { Box, Container, Grid, styled, Typography } from "@mui/material";
 import Avatar from "../../../../assets/images/avatar.jpeg";
 import DownloadIcon from "@mui/icons-material/Download";
-import EmailIcon from "@mui/icons-material/Email";
+// import EmailIcon from "@mui/icons-material/Email";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 import AnimatedBackGround from "../../../../components/AnimatedBackGround/AnimatedBackGround";
 import CV from "../../../../assets/pdfs/JuanHelpes_Att.pdf";
@@ -39,12 +40,13 @@ const Hero = () => {
 };
 
   const handleEmail = () => {
-    const emailAddress = 'example@example.com';
-    const subject = 'Subject';
-    const body = 'Hello! I saw your portfolio...';
+    window.open("https://www.linkedin.com/in/juan-helpes-61864a22b/")
+    // const emailAddress = 'helpeshs@gmail.com';
+    // const subject = 'Subject';
+    // const body = 'Olá! Eu vi seu portifolio...';
 
-    const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.open(mailtoLink);
+    // const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    // window.open(mailtoLink);
 }
 
 
@@ -85,9 +87,9 @@ const Hero = () => {
                 </Grid>
                 <Grid size={{ xs: 12, md: 4 }} display="flex" justifyContent="center">
                   <StyledButton onClick={() => handleEmail()}>
-                    <EmailIcon />
+                    <LinkedInIcon />
                     <Typography>
-                      Contate-me
+                      LinkedIn
                     </Typography>
                   </StyledButton>
                 </Grid>
