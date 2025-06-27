@@ -11,6 +11,12 @@ import userMobile from "../../../../assets/images/appMobile/user.png";
 import eventoMobile from "../../../../assets/images/appMobile/eventos.png";
 import presencaMobile from "../../../../assets/images/appMobile/registrarPresenca.png";
 
+import loginWebChat from "../../../../assets/images/webChat/Login.png";
+import registroWebChat from "../../../../assets/images/webChat/registro.png";
+import chatWebChat from "../../../../assets/images/webChat/chat.png";
+
+
+
 const ProjectsSection: React.FC = () => {
 
     const StyledExperience = styled("div")(({ theme }) => ({
@@ -34,6 +40,14 @@ const ProjectsSection: React.FC = () => {
             technologies: "Technologies: React Native, Node.js, Express, Expo, Expo router",
             imgs: [loginMobile, userMobile, eventoMobile, presencaMobile],
             codeURL: "https://github.com/JuanHelpes/register_appMobile",
+        },
+        {
+            title: "Web Chat",
+            subtitle: "",
+            description: "Este projeto consiste em um sistema de chat em tempo real com autenticação de usuários, desenvolvido com foco nas tecnologias de backend. Os usuários podem se registrar, realizar login (inclusive com o Google, utilizando a biblioteca @react-oauth/google) e trocar mensagens em uma sala de chat. O sistema foi construído com Node.js, Express, Socket.IO para comunicação em tempo real, MongoDB para armazenamento dos dados de usuários, bcrypt para hash de senhas e jsonwebtoken (JWT) para autenticação segura. No frontend, foi utilizado React com Vite, TypeScript, Material UI para a interface visual e React Toastify para notificações. A conexão com o WebSocket ocorre somente ao entrar na página de chat, mantendo o sistema leve e eficiente mesmo com uma interface simplificada.",
+            technologies: "Technologies: Node.js, Express, Socket.io, MongoDB, TypeScript, Material UI",
+            imgs: [loginWebChat, registroWebChat, chatWebChat],
+            codeURL: "https://github.com/JuanHelpes/login-and-chat",
         }
     ]
 
@@ -45,7 +59,7 @@ const ProjectsSection: React.FC = () => {
                 </Box>
                 <Grid container spacing={5} pb={3}>
                     {projects.map((project: ProjectCardProps, index: number) => (
-                        <Grid size = {{md: 6}} key={index}>
+                        <Grid size={{ md: 6 }} key={index}>
                             <AnimationComponent moveDirection={index % 2 == 0 ? "right" : "left"}>
                                 <ProjectCard
                                     title={project.title}

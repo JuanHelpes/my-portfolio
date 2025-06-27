@@ -15,7 +15,7 @@ const AboutSection: React.FC = () => {
     }));
 
     const skillsSet = [
-        "Javascript", "React", "Git", "HTML", "CSS", "Material UI", "Node.js", "Express", "MongoDB", "MySQL", "Python", "Java", "C++", "Power Platform"
+        "JavaScript", "TypeScript", "React", "Git", "HTML", "CSS", "Material UI", "Node.js", "Express", "MongoDB", "MySQL", "Python", "Java", "C++", "Power Platform"
     ]
 
     return (
@@ -24,7 +24,7 @@ const AboutSection: React.FC = () => {
                 <Box id="about" pt={5} mb={3}>
                     <Typography variant="h2" textAlign="center" >Sobre</Typography>
                 </Box>
-                <Grid container  display="flex" justifyContent="center" >
+                <Grid container display="flex" justifyContent="center" >
                     {/* <Grid size= {{xs:9, md:2.5}}>
                         <AnimationComponent moveDirection="right">
                             <StyledCard variant="outlined">
@@ -35,7 +35,7 @@ const AboutSection: React.FC = () => {
                             </StyledCard>
                         </AnimationComponent>
                     </Grid> */}
-                    <Grid size= {{xs:9, md:2.5}}>
+                    <Grid size={{ xs: 9, md: 2.5 }}>
                         <AnimationComponent moveDirection="left">
                             <StyledCard variant="outlined">
                                 <SchoolIcon />
@@ -49,10 +49,10 @@ const AboutSection: React.FC = () => {
                 </Grid>
                 <Box pb={1}>
                     <Typography>
-                        Graduado em Engenharia de Computação pelo CEFET-MG, com foco em desenvolvimento de software e constante busca por aprimoramento profissional. 
-                        Possuo experiências acadêmicas como monitor em disciplinas da área de computação, além de atuação em projetos de pesquisa, extensão e em empresa 
-                        incubada como desenvolvedor, onde atuei principalmente no backend utilizando Node.js e PHP. Também realizei estágio na área de 
-                        desenvolvimento de aplicações low-code e automações digitais de processos e fluxos de trabalho, ampliando minha visão sobre integração de 
+                        Graduado em Engenharia de Computação pelo CEFET-MG, com foco em desenvolvimento de software e constante busca por aprimoramento profissional.
+                        Possuo experiências acadêmicas como monitor em disciplinas da área de computação, além de atuação em projetos de pesquisa, extensão e em empresa
+                        incubada como desenvolvedor, onde atuei principalmente no backend utilizando Node.js e PHP. Também realizei estágio na área de
+                        desenvolvimento de aplicações low-code e automações digitais de processos e fluxos de trabalho, ampliando minha visão sobre integração de
                         sistemas e otimização de processos.
                     </Typography>
                 </Box>
@@ -63,7 +63,7 @@ const AboutSection: React.FC = () => {
                 <Box mb={5}>
                     <Grid container spacing={3} justifyContent="center">
                         {skillsSet.map((skill, index) => (
-                            <Grid key={index} size = {{xs: 5, sm: 4, md: 2, lg: 2}}>
+                            <Grid key={index} size={{ xs: 5, sm: 4, md: 2, lg: 2 }}>
                                 <StyledCard variant="outlined">
                                     {skill}
                                 </StyledCard>
