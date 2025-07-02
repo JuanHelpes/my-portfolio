@@ -15,6 +15,9 @@ import loginWebChat from "../../../../assets/images/webChat/Login.png";
 import registroWebChat from "../../../../assets/images/webChat/registro.png";
 import chatWebChat from "../../../../assets/images/webChat/chat.png";
 
+import encurtador from "../../../../assets/images/encurtador/encurtador.png";
+
+
 
 
 const ProjectsSection: React.FC = () => {
@@ -48,6 +51,14 @@ const ProjectsSection: React.FC = () => {
             technologies: "Technologies: Node.js, Express, Socket.io, MongoDB, TypeScript, Material UI",
             imgs: [loginWebChat, registroWebChat, chatWebChat],
             codeURL: "https://github.com/JuanHelpes/login-and-chat",
+        },
+        {
+            title: "Encurtador URL",
+            subtitle: "",
+            description: "Encurtador de URLs com React + TypeScript no frontend e Node.js + Socket.IO no backend. Permite gerar links curtos aleatórios de até 6 caracteres (via crypto), com um tempo de validade (10 minutos). A interface utiliza Material UI e DataGrid para exibir as URLs e a quantidade cliques realizados na URL encurtada, que são atualizados em tempo real via WebSockets. A API REST permite criar, listar e excluir URLs, com foco principal na estrutura do backend, integração com banco de dados e comunicação em tempo real.",
+            technologies: "Technologies: Node.js, Express, Socket.io, MongoDB, TypeScript, Material UI, Crypto",
+            imgs: [encurtador],
+            codeURL: "https://github.com/JuanHelpes/url-shortener",
         }
     ]
 

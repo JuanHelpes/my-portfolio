@@ -128,7 +128,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 <Box
                     sx={{
                         position: "absolute",
-                        top: 8,
+                        top: -15,
                         right: 8,
                         borderRadius: "50%",
                         zIndex: 1,

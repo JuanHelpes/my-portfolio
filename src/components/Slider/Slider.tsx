@@ -15,7 +15,7 @@ const SliderComp: React.FC<SliderProps> = ({
     maxHeight: "45vh",
     padding: "10px 0",
     [theme.breakpoints.up('md')]: {
-      height: "35vh",
+      height: "37vh",
     },
   }));
 
