@@ -17,7 +17,7 @@ import chatWebChat from "../../../../assets/images/webChat/chat.png";
 
 import encurtador from "../../../../assets/images/encurtador/encurtador.png";
 
-
+import summoner from "../../../../assets/images/summoner/summoner.png";
 
 
 const ProjectsSection: React.FC = () => {
@@ -59,6 +59,14 @@ const ProjectsSection: React.FC = () => {
             technologies: "Technologies: Node.js, Express, Socket.io, MongoDB, TypeScript, Material UI, Crypto",
             imgs: [encurtador],
             codeURL: "https://github.com/JuanHelpes/url-shortener",
+        },
+        {
+            title: "Summoner Chat",
+            subtitle: "",
+            description: "O Summoner Chat é uma aplicação web que une dados do League of Legends com inteligência artificial para oferecer recomendações táticas personalizadas. O usuário informa seu nickname e o sistema busca automaticamente a última partida recente via API da Riot (simulando uma partida em tempo real para facilitar o desenvolvimento). As informações coletadas (como campeão, rota, aliados e inimigos) são enviadas a uma LLM (foi utilizado o Gemini - Google AI), que responde com sugestões de build e dicas estratégicas. O usuário pode então fazer perguntas em linguagem natural, tipo, como jogar contra certos campeões ou qual item fazer. O sistema foi desenvolvido com React, Node.js e Express, e foi projetado para ser flexível, permitindo a substituição do modelo de IA por qualquer outro via API, como GPT-4, Claude ou modelos locais usando Ollama.",
+            technologies: "Technologies: Node.js, Express, TypeScript, Material UI, React, Gemini API (Google AI), Riot API",
+            imgs: [summoner],
+            codeURL: "https://github.com/JuanHelpes/summoner-chat",
         }
     ]
 
