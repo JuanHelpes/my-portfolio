@@ -15,7 +15,7 @@ const AboutSection: React.FC = () => {
     }));
 
     const skillsSet = [
-        "JavaScript", "TypeScript", "React", "Git", "HTML", "CSS", "Material UI", "Node.js", "Nest.js", "Express", "Prisma", "MongoDB", "MySQL", "Python", "Java", "C++", "Power Platform"
+        "JavaScript", "TypeScript", "Docker", "React", "Git", "HTML", "CSS", "Material UI", "Node.js", "Nest.js", "Express", "Prisma", "MongoDB", "MySQL", "Python", "Java", "C++", "Power Platform"
     ]
 
     return (
