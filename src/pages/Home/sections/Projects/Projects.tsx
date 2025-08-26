@@ -19,6 +19,9 @@ import encurtador from "../../../../assets/images/encurtador/encurtador.png";
 
 import summoner from "../../../../assets/images/summoner/summoner.png";
 
+import qrcode from "../../../../assets/images/qrcodeGenerator/qrcode.png";
+
+
 
 const ProjectsSection: React.FC = () => {
 
@@ -37,13 +40,14 @@ const ProjectsSection: React.FC = () => {
             codeURL: "https://github.com/JuanHelpes/e-commerce-test",
         },
         {
-            title: "App Mobile Register",
+            title: "QrCode Generator",
             subtitle: "",
-            description: "Aplicativo mobile para Android, desenvolvido durante a disciplina de Computação Móvel, que permite criar eventos, cadastrar atividades e gerenciar presenças. Utiliza React Native com Expo para facilitar o uso de recursos nativos e um backend em Node.js com Express para comunicação com o servidor. O projeto está em desenvolvimento e serviu como primeiro contato com aplicações móveis e integração com APIs.",
-            technologies: "Technologies: React Native, Node.js, Express, Expo, Expo router",
-            imgs: [loginMobile, userMobile, eventoMobile, presencaMobile],
-            codeURL: "https://github.com/JuanHelpes/register_appMobile",
-        },
+            description: "Aplicação em Spring Boot que gera QR Codes a partir de um texto e armazena o resultado no Supabase Storage. O QR Code é gerado usando a biblioteca Google ZXing e a API retorna o link do PNG salvo.",
+            technologies: "Technologies: Java, Maven, Spring Boot, Docker, Supabase (Storage Bucket), Google ZXing (QR Code)",
+            imgs: [qrcode],
+            codeURL: "https://github.com/JuanHelpes/spring-qrcode-generator",
+        }
+        ,
         {
             title: "Web Chat",
             subtitle: "",
@@ -67,6 +71,14 @@ const ProjectsSection: React.FC = () => {
             technologies: "Technologies: Node.js, Express, TypeScript, Material UI, React, Gemini API (Google AI), Riot API",
             imgs: [summoner],
             codeURL: "https://github.com/JuanHelpes/summoner-chat",
+        },
+        {
+            title: "App Mobile Register",
+            subtitle: "",
+            description: "Aplicativo mobile para Android, desenvolvido durante a disciplina de Computação Móvel, que permite criar eventos, cadastrar atividades e gerenciar presenças. Utiliza React Native com Expo para facilitar o uso de recursos nativos e um backend em Node.js com Express para comunicação com o servidor. O projeto está em desenvolvimento e serviu como primeiro contato com aplicações móveis e integração com APIs.",
+            technologies: "Technologies: React Native, Node.js, Express, Expo, Expo router",
+            imgs: [loginMobile, userMobile, eventoMobile, presencaMobile],
+            codeURL: "https://github.com/JuanHelpes/register_appMobile",
         }
     ]
 
