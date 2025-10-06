@@ -21,6 +21,8 @@ import summoner from "../../../../assets/images/summoner/summoner.png";
 
 import qrcode from "../../../../assets/images/qrcodeGenerator/qrcode.png";
 
+import classifica from "../../../../assets/images/classificaEmail/classifica.png";
+
 
 
 const ProjectsSection: React.FC = () => {
@@ -72,13 +74,21 @@ const ProjectsSection: React.FC = () => {
             imgs: [summoner],
             codeURL: "https://github.com/JuanHelpes/summoner-chat",
         },
+        // {
+        //     title: "App Mobile Register",
+        //     subtitle: "",
+        //     description: "Aplicativo mobile para Android, desenvolvido durante a disciplina de Computação Móvel, que permite criar eventos, cadastrar atividades e gerenciar presenças. Utiliza React Native com Expo para facilitar o uso de recursos nativos e um backend em Node.js com Express para comunicação com o servidor. O projeto está em desenvolvimento e serviu como primeiro contato com aplicações móveis e integração com APIs.",
+        //     technologies: "Technologies: React Native, Node.js, Express, Expo, Expo router",
+        //     imgs: [loginMobile, userMobile, eventoMobile, presencaMobile],
+        //     codeURL: "https://github.com/JuanHelpes/register_appMobile",
+        // }
         {
-            title: "App Mobile Register",
+            title: "Classificador de E-mails",
             subtitle: "",
-            description: "Aplicativo mobile para Android, desenvolvido durante a disciplina de Computação Móvel, que permite criar eventos, cadastrar atividades e gerenciar presenças. Utiliza React Native com Expo para facilitar o uso de recursos nativos e um backend em Node.js com Express para comunicação com o servidor. O projeto está em desenvolvimento e serviu como primeiro contato com aplicações móveis e integração com APIs.",
-            technologies: "Technologies: React Native, Node.js, Express, Expo, Expo router",
-            imgs: [loginMobile, userMobile, eventoMobile, presencaMobile],
-            codeURL: "https://github.com/JuanHelpes/register_appMobile",
+            description: "Este projeto permite que usuários insiram ou façam upload de e-mails em formato texto ou arquivo (.pdf/.txt) para que o sistema realize o pré-processamento de linguagem natural, classificação e gere automaticamente uma sugestão de resposta utilizando a API do Gemini. O frontend foi construído em React, com interface intuitiva para envio e visualização de respostas. O backend foi desenvolvido em FastAPI, integrando bibliotecas de NLP para pré-processar o texto antes do envio ao modelo de IA.",
+            technologies: "Technologies: React + Vite, Python, FastAPI, Gemini API, Docker ",
+            imgs: [classifica],
+            codeURL: "https://github.com/JuanHelpes/classifica-email",
         }
     ]
 
