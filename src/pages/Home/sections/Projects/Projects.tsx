@@ -23,6 +23,16 @@ import qrcode from "../../../../assets/images/qrcodeGenerator/qrcode.png";
 
 import classifica from "../../../../assets/images/classificaEmail/classifica.png";
 
+import gym_1 from "../../../../assets/images/fitManage/gym_1.png";
+import gym_2 from "../../../../assets/images/fitManage/gym_2.png";
+import gym_3 from "../../../../assets/images/fitManage/gym_3.png";
+import gym_4 from "../../../../assets/images/fitManage/gym_5.png";
+import gym_5 from "../../../../assets/images/fitManage/gym_6.png";
+import gym_6 from "../../../../assets/images/fitManage/gym_7.png";
+import gym_7 from "../../../../assets/images/fitManage/gym_8.png";
+
+
+
 
 
 const ProjectsSection: React.FC = () => {
@@ -36,8 +46,8 @@ const ProjectsSection: React.FC = () => {
         {
             title: "Projeto E-commerce",
             subtitle: "",
-            description: "Projeto de E-commerce Full Stack desenvolvido com React (Material UI), Node.js, Express e MongoDB. Este é um site de e-commerce básico, ainda em desenvolvimento, que já conta com funcionalidades essenciais como registro e autenticação de usuários, utilizando bcrypt para criptografia de senhas e JWT (jsonwebtoken) para controle de acesso a rotas protegidas. Os produtos são carregados dinamicamente a partir de uma base de dados MongoDB, e os usuários têm a capacidade de adicionar ou remover itens do carrinho de compras, além de editar suas informações pessoais por meio de uma interface moderna construída com Material UI. O projeto foca na implementação de um backend seguro e uma experiência de usuário fluida, servindo como base para evoluções futuras. (Em produção: API utilizando Nest.js e TypeScript para aprimorar a estrutura do backend).",
-            technologies: "Tecnologias: React, Node.js, Nest.js, Express, Docker, Material UI, Prisma, MongoDB",
+            description: "Projeto de E-commerce Full Stack desenvolvido com React (Material UI), Node.js, Express e MongoDB. Este é um site de e-commerce básico, ainda em desenvolvimento, que já conta com funcionalidades essenciais como registro e autenticação de usuários, utilizando bcrypt para criptografia de senhas e JWT (jsonwebtoken) para controle de acesso a rotas protegidas. Os produtos são carregados dinamicamente a partir de uma base de dados MongoDB, e os usuários têm a capacidade de adicionar ou remover itens do carrinho de compras, além de editar suas informações pessoais por meio de uma interface moderna construída com Material UI. O projeto foca na implementação de um backend seguro e uma experiência de usuário fluida, servindo como base para evoluções futuras. (Em produção: API utilizando NestJS e TypeScript para aprimorar a estrutura do backend).",
+            technologies: "Tecnologias: React, Node.js, NestJS, Express, Docker, Material UI, Prisma, MongoDB",
             imgs: [eCommerceCarrinho, eCommerceDados, eCommerceHome, eCommerceLogin],
             codeURL: "https://github.com/JuanHelpes/e-commerce-test",
         },
@@ -89,6 +99,14 @@ const ProjectsSection: React.FC = () => {
             technologies: "Technologies: React + Vite, Python, FastAPI, Gemini API, Docker ",
             imgs: [classifica],
             codeURL: "https://github.com/JuanHelpes/classifica-email",
+        },
+        {
+            title: "Fit Manage (Em desenvolvimento)",
+            subtitle: "",
+            description: "Aplicação web fullstack para gerenciamento de fichas de treino, com autenticação e controle de acesso por tipo de usuário (aluno e instrutor). O sistema foi pensado para instrutores no desktop e alunos no mobile, com telas mobile-first e funcionalidades planejadas como PWA para melhor experiência no celular. Alunos acompanham treinos e evolução física, enquanto instrutores gerenciam alunos, fichas, alertas e dashboards. Desenvolvido com React + Vite e NestJS, Prisma e MongoDB. Projeto em desenvolvimento.",
+            technologies: "Technologies: React + Vite, NestJs, Prisma, MongoDB ",
+            imgs: [gym_1, gym_2, gym_3, gym_4, gym_5, gym_6, gym_7],
+            codeURL: "https://github.com/JuanHelpes/fit-manage",
         }
     ]
 
