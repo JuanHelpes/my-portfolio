@@ -56,17 +56,6 @@ const StyledCard = styled("div")(({ theme }) => ({
     },
 }));
 
-const DialogImageBox = styled(Box)({
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    // Escala maior para o slider
-    "& .slider-image": {
-        transform: "scale(1.2)",
-        transition: "transform 0.3s",
-    },
-});
-
 const ProjectCard: React.FC<ProjectCardProps> = ({
     title,
     subtitle,
@@ -77,10 +66,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
     const [open, setOpen] = useState(false);
 
-    const handleImageClick = () => {
-        setOpen(true);
-    };
-
     return (
         <>
             <StyledCard>
@@ -88,10 +73,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     {title}
                 </Typography>
                 <Typography gutterBottom>{subtitle}</Typography>
-                {/* Mini slider, clicking opens modal */}
-                <Box onClick={handleImageClick} sx={{ cursor: "pointer" }}>
+
+                <Box onClick={() => setOpen(true)} sx={{ cursor: "pointer" }}>
                     <SliderComp images={imgs || []} />
                 </Box>
+
                 <DescriptionBox>
                     <Typography textAlign={"justify"} fontSize={15}>
                         {description}
@@ -106,10 +92,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     </StyledButton>
                 </Grid>
             </StyledCard>
+
             <Dialog
                 open={open}
                 onClose={() => setOpen(false)}
-                maxWidth="md"
+                maxWidth="lg"
                 fullWidth
                 sx={{
                     zIndex: 1302,
@@ -118,9 +105,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                         boxShadow: "none",
                         overflow: "visible",
                         position: "relative",
+                        margin: "16px",
                     },
                     "& .MuiBackdrop-root": {
-                        background: "rgba(0,0,0,0.3)",
+                        background: "rgba(0,0,0,0.85)",
                         backdropFilter: "blur(6px)",
                     },
                 }}
@@ -128,9 +116,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 <Box
                     sx={{
                         position: "absolute",
-                        top: -15,
-                        right: 8,
-                        borderRadius: "50%",
+                        top: -40,
+                        right: 0,
                         zIndex: 1,
                     }}
                 >
@@ -138,10 +125,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                         <CloseIcon />
                     </IconButton>
                 </Box>
-                <DialogImageBox p={2}>
-                    {/* Passa a prop imageClassName para adicionar a classe slider-image nas imagens */}
-                    <SliderComp images={imgs || []} />
-                </DialogImageBox>
+
+                <Box sx={{ width: "100%", p: 1 }}>
+                    <SliderComp images={imgs || []} fullSize />
+                </Box>
             </Dialog>
         </>
     );

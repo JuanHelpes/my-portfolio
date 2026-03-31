@@ -1,54 +1,53 @@
 import { styled } from "@mui/material";
 import Slider from "react-slick";
+
 export interface SliderProps {
   images: string[];
+  fullSize?: boolean;
 }
 
-const SliderComp: React.FC<SliderProps> = ({
-  images
-}) => {
+const SliderComp: React.FC<SliderProps> = ({ images, fullSize = false }) => {
 
   const StyledImg = styled("img")(({ theme }) => ({
     width: "100%",
     objectFit: "contain",
     height: "auto",
-    maxHeight: "45vh",
+    maxHeight: fullSize ? "80vh" : "45vh",
     padding: "10px 0",
     [theme.breakpoints.up('md')]: {
-      height: "37vh",
+      height: fullSize ? "75vh" : "37vh",
     },
   }));
 
-  var settings = {
+  const settings = {
     dots: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    Height: "35vh",
-    arrows: false,
+    arrows: fullSize,
     fade: false,
-    autoplay: true,
+    autoplay: !fullSize,
     variableWidth: false,
   };
 
   const SliderWrapper = styled("div")(({ theme }) => ({
     width: "100%",
-    height: "30vh", // altura desejada
+    height: fullSize ? "75vh" : "30vh",
     overflow: "hidden",
 
     [theme.breakpoints.up("xl")]: {
-      height: "38vh", // exemplo de ajuste para telas maiores
+      height: fullSize ? "80vh" : "38vh",
     },
 
     [theme.breakpoints.up("md")]: {
-      height: "38vh", // exemplo de ajuste para telas maiores
+      height: fullSize ? "75vh" : "38vh",
     },
 
     "& .slick-slide": {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      height: "100%", // importante para ocupar a altura do wrapper
+      height: "100%",
     },
 
     "& .slick-track": {
@@ -56,38 +55,43 @@ const SliderComp: React.FC<SliderProps> = ({
     },
 
     "& .slick-dots": {
-
+      bottom: fullSize ? "10px" : "-3px",
       [theme.breakpoints.up("md")]: {
-        bottom: "-3px", // distancia do fundo do slider (padrão costuma ser 20px)
-        marginBottom: "0px", // evita espaço extra após o slider
+        bottom: fullSize ? "10px" : "-3px",
+        marginBottom: "0px",
       },
-
-
     },
-    // Estilo das bolinhas (dots)
+
     "& .slick-dots li button:before": {
-      fontSize: "10px", // tamanho da bolinha
-      color: "#888",    // cor padrão
-      opacity: 1,       // se quiser evitar o efeito fade-out
+      fontSize: "10px",
+      color: "#888",
+      opacity: 1,
     },
 
     "& .slick-dots li.slick-active button:before": {
-      color: theme.palette.secondary.light, // cor da bolinha ativa (usando tema)
+      color: theme.palette.secondary.light,
     },
+
+    "& .slick-prev, & .slick-next": {
+      zIndex: 10,
+      "&:before": {
+        fontSize: "30px",
+        color: "#fff",
+      },
+    },
+    "& .slick-prev": { left: 10 },
+    "& .slick-next": { right: 10 },
   }));
 
   return (
-    <>
-      <SliderWrapper>
-        <Slider useCSS={true}  {...settings}>
-          {images.map((image, index) => (
-            <StyledImg key={index} src={image} alt={`Slide ${index}`} />
-          ))}
-        </Slider>
-      </SliderWrapper>
+    <SliderWrapper>
+      <Slider useCSS {...settings}>
+        {images.map((image, index) => (
+          <StyledImg key={index} src={image} alt={`Slide ${index}`} />
+        ))}
+      </Slider>
+    </SliderWrapper>
+  );
+};
 
-    </>
-  )
-}
-
-export default SliderComp
+export default SliderComp;

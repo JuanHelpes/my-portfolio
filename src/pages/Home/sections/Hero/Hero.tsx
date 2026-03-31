@@ -30,7 +30,7 @@ const Hero = () => {
     // Create a link element
     const link = document.createElement('a');
     link.href = CV
-    link.download = 'JuanHelpes_CV.pdf'; // Set the download attribute to specify the file name
+    link.download = 'JuanHelpes_C.pdf'; // Set the download attribute to specify the file name
     // Append the link to the body
     document.body.appendChild(link);
     // Trigger the click event
