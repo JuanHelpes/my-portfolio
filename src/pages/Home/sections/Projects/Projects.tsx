@@ -1,10 +1,10 @@
 import { Box, Container, Grid, Typography, styled } from "@mui/material";
 import ProjectCard, { type ProjectCardProps } from "../../../../components/ProjectCard/ProjectCard";
 import AnimationComponent from "../../../../components/AnimationComponent/AnimationComponent";
-import eCommerceHome from "../../../../assets/images/eCommerce/eCommerceHome_1.png";
-import eCommerceCarrinho from "../../../../assets/images/eCommerce/carrinhoEcommerce.png";
-import eCommerceLogin from "../../../../assets/images/eCommerce/loginEcommerce.png";
-import eCommerceDados from "../../../../assets/images/eCommerce/meusDadosEcommerce.png";
+// import eCommerceHome from "../../../../assets/images/eCommerce/eCommerceHome_1.png";
+// import eCommerceCarrinho from "../../../../assets/images/eCommerce/carrinhoEcommerce.png";
+// import eCommerceLogin from "../../../../assets/images/eCommerce/loginEcommerce.png";
+// import eCommerceDados from "../../../../assets/images/eCommerce/meusDadosEcommerce.png";
 
 // import loginMobile from "../../../../assets/images/appMobile/login.png";
 // import userMobile from "../../../../assets/images/appMobile/user.png";
