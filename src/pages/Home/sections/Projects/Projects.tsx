@@ -19,7 +19,10 @@ import encurtador from "../../../../assets/images/encurtador/encurtador.png";
 
 import summoner from "../../../../assets/images/summoner/summoner.png";
 
-import qrcode from "../../../../assets/images/qrcodeGenerator/qrcode.png";
+//import qrcode from "../../../../assets/images/qrcodeGenerator/qrcode.png";
+
+import workout_notify from "../../../../assets/images/workouNotify/workout_notify.png";
+
 
 import classifica from "../../../../assets/images/classificaEmail/classifica.png";
 
@@ -46,21 +49,28 @@ const ProjectsSection: React.FC = () => {
         {
             title: "Fit Manage (Em desenvolvimento)",
             subtitle: "",
-            description: "Aplicação web fullstack para gerenciamento de fichas de treino, com autenticação e controle de acesso por tipo de usuário (aluno e instrutor). O sistema foi pensado para instrutores no desktop e alunos no mobile, com telas mobile-first e funcionalidades planejadas como PWA para melhor experiência no celular. Alunos acompanham treinos e evolução física, enquanto instrutores gerenciam alunos, fichas, alertas e dashboards. Desenvolvido com React + Vite e NestJS, Prisma e MongoDB.",
-            technologies: "Technologies: React + Vite, NestJs,Task scheduling, Prisma, MongoDB ",
+            description: "Aplicação web fullstack para gerenciamento de fichas de treino, com autenticação e controle de acesso por tipo de usuário (aluno e instrutor). O sistema foi pensado para instrutores no desktop e alunos no mobile, com telas mobile-first e funcionalidades planejadas como PWA para melhor experiência no celular. Alunos acompanham treinos e evolução física, enquanto instrutores gerenciam alunos, fichas, alertas e dashboards. Desenvolvido com React + Vite e NestJS, Prisma e MongoDB. A arquitetura foi estendida com um serviço backend desacoplado responsável por processamento de eventos e envio de notificações assíncronas via e-mail, utilizando mensageria com RabbitMQ para comunicação entre sistemas, garantindo escalabilidade, resiliência e baixo acoplamento.",
+            technologies: "Technologies: React + Vite, NestJs,Task scheduling, Prisma, MongoDB, RabbitMQ, Docker",
             imgs: [gym_1, gym_2, gym_3, gym_4, gym_5, gym_6, gym_7],
             codeURL: "https://github.com/JuanHelpes/fit-manage",
         },
-
         {
-            title: "QrCode Generator",
+            title: "Workout Notify Service (Em desenvolvimento)",
             subtitle: "",
-            description: "Aplicação em Spring Boot que gera QR Codes a partir de um texto e armazena o resultado no Supabase Storage. O QR Code é gerado usando a biblioteca Google ZXing e a API retorna o link do PNG salvo.",
-            technologies: "Technologies: Java, Maven, Spring Boot, Docker, Supabase (Storage Bucket), Google ZXing (QR Code)",
-            imgs: [qrcode],
-            codeURL: "https://github.com/JuanHelpes/spring-qrcode-generator",
-        }
-        ,
+            description: "Aplicação backend orientada a eventos para envio de notificações assíncronas, responsável por processar eventos de negócio (como criação de treinos) e disparar e-mails automaticamente. A comunicação entre sistemas é feita via RabbitMQ, utilizando exchanges, filas e DLQ para garantir resiliência e desacoplamento. O serviço consome eventos, aplica regras de negócio e envia notificações via e-mail, com tratamento de erros e arquitetura preparada para retry e escalabilidade. O backend principal (desenvolvido com NestJS) publica eventos no RabbitMQ, e este serviço de notificações consome esses eventos para realizar o envio de e-mails, garantindo uma arquitetura modular e eficiente.",
+            technologies: "Technologies: Java, Spring Boot, RabbitMQ, Spring AMQP, Email Service (SMTP)",
+            imgs: [workout_notify],
+            codeURL: "https://github.com/JuanHelpes/workout-notify-service",
+        },
+        // {
+        //     title: "QrCode Generator",
+        //     subtitle: "",
+        //     description: "Aplicação em Spring Boot que gera QR Codes a partir de um texto e armazena o resultado no Supabase Storage. O QR Code é gerado usando a biblioteca Google ZXing e a API retorna o link do PNG salvo.",
+        //     technologies: "Technologies: Java, Maven, Spring Boot, Docker, Supabase (Storage Bucket), Google ZXing (QR Code)",
+        //     imgs: [qrcode],
+        //     codeURL: "https://github.com/JuanHelpes/spring-qrcode-generator",
+        // }
+        // ,
         {
             title: "Web Chat",
             subtitle: "",
